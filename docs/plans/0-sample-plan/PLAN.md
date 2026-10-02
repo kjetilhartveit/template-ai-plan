@@ -1,14 +1,14 @@
-# New feature: {name of the feature}
+# {title of the plan}
 
-Write some more context for the agent.
+{context for the agent}
 
 ## Plan
 
 - [ ] First step
 - [ ] Second step
 - [ ] Third step
-    - [ ] Substep 1
-    - [ ] Substep 2
+  - [ ] Substep 1
+  - [ ] Substep 2
 
 ### Execution of plan
 
