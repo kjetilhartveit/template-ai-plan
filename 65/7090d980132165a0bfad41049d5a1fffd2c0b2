@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "657090d980132165a0bfad41049d5a1fffd2c0b2",
+  "prompts": {},
+  "humans": {
+    "h_ea837308011c6c": {
+      "author": "Kjetil Hårtveit <kjetil_runescape@hotmail.com>"
+    }
+  }
+}
