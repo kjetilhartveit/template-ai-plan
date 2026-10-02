@@ -1,14 +1,6 @@
 # {title of the plan}
 
-{context for the agent}
-
-## Plan
-
-- [ ] First step
-- [ ] Second step
-- [ ] Third step
-  - [ ] Substep 1
-  - [ ] Substep 2
+{context and plan body}
 
 ### Execution of plan
 
