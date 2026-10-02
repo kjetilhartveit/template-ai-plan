@@ -1,0 +1,14 @@
+docs/plans/AGENTS.md
+  h_ea837308011c6c 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8ba72dc9f4497f3fb737f8c86434c7fe292f3be6",
+  "prompts": {},
+  "humans": {
+    "h_ea837308011c6c": {
+      "author": "Kjetil Hårtveit <kjetil_runescape@hotmail.com>"
+    }
+  }
+}
