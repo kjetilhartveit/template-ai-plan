@@ -1,0 +1,31 @@
+# Read by ripgrep (gitignore syntax) and therefore by tools built on it. Not read by git, so everything here stays committed.
+#
+# docs/plans holds historical plans. Many describe designs that later plans replaced (e.g. 15-26 all reshape the snooker.org budget and refresh),
+# and plan prose surfacing in a repo-wide search reads like current truth to an agent. Keeping them out of default search avoids that.
+#
+# Verified behavior with docs/plans listed here:
+#
+# | Check                                                   | Plans found? |
+# | ------------------------------------------------------- | ------------ |
+# | `rg <pattern>` repo-wide                                | No           |
+# | `rg --files` repo-wide                                  | No           |
+# | `rg <pattern> -g '*.md'` / `-t md` / `-g '!src/**'`     | No           |
+# | `rg <pattern> docs/plans`, or rg run inside the folder  | Yes          |
+# | `rg <pattern> -g 'docs/**'`                             | Yes          |
+# | Claude Code Grep, repo-wide                             | No           |
+# | Claude Code Grep with `path: docs/plans`                | Yes          |
+# | Claude Code Read of a plan by path                      | Yes          |
+# | Claude Code Glob `**/PLAN.md`, repo-wide                | Yes (gap)    |
+#
+# Gaps:
+# - Claude Code's Glob tool ignores this file: it passes `--no-ignore` to ripgrep, which disables .gitignore, .ignore and .rgignore alike.
+#   https://github.com/anthropics/claude-code/issues/97866 proposes `--no-ignore-vcs` instead, which would make Glob honor this file.
+#   Workaround: launch Claude Code with CLAUDE_CODE_GLOB_NO_IGNORE=false, at the cost of Glob also hiding .gitignored files.
+#   Glob only lists file names, so the leak is far smaller than with Grep.
+# - `grep -r`, `find` and editors' search do not read .ignore.
+# - .claudeignore is no alternative: Grep and Glob don't read it (https://github.com/anthropics/claude-code/issues/46699).
+#
+# Docs: https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#automatic-filtering
+#       https://code.claude.com/docs/en/tools-reference
+docs/plans/
+ 
